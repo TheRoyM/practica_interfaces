@@ -21,15 +21,16 @@ public class Unidad1 {
         listaCaninos.add(canino3);
         listaCaninos.add(canino4);
 
+
         //Creó el mapa
-        Map<String, Canino> mapaCaninos = new HashMap<>();
+        Map<String, Movimiento> mapaCaninos = new TreeMap<>();
         mapaCaninos.put(canino1.getNombre(), canino1);
         mapaCaninos.put(canino2.getNombre(), canino2);
         mapaCaninos.put(canino3.getNombre(), canino3);
         mapaCaninos.put(canino4.getNombre(), canino4);
-        //odenamiento del mapa
-        List<Canino> listaOrdenada = new LinkedList<>(mapaCaninos.values());
-         listaOrdenada.sort(Comparator.comparing(Canino::getNombre));
+
+        //Recorro mapa
+        List<Movimiento> listaOrdenada = new LinkedList<>(mapaCaninos.values());
         for (Movimiento canino: listaOrdenada){
             canino.verInformacion();
         }
@@ -49,15 +50,14 @@ public class Unidad1 {
         listaRoedores.add(roedor4);
 
         //Creó el mapa
-        Map<String, Roedor> mapaRoedores = new HashMap<>();
+        Map<String, Raton> mapaRoedores = new TreeMap<>();
         mapaRoedores.put(roedor1.getNombre(), roedor1);
         mapaRoedores.put(roedor2.getNombre(), roedor2);
         mapaRoedores.put(roedor3.getNombre(), roedor3);
         mapaRoedores.put(roedor4.getNombre(), roedor4);
 
-        //odenamiento del mapa
-        List<Roedor> listaOrdenada2 = new LinkedList<>(mapaRoedores.values());
-        listaOrdenada2.sort(Comparator.comparing(Roedor::getNombre));
+        //Recorro mapa
+        List<Raton> listaOrdenada2 = new LinkedList<>(mapaRoedores.values());
         for (Raton roedores: listaOrdenada2){
             roedores.verInformacion();
         }
