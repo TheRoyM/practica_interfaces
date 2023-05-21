@@ -6,27 +6,30 @@ import java.util.*;
 
 public class Unidad1 {
     public static void verDatosMapa(){
-        Roedor roedor1 = new Roedor("Ardilla",14F,10);
-        Roedor roedor2 = new Roedor("Hamster",14F,5);
-        Roedor roedor3 = new Roedor("Raton",14F,113);
+        Canino canino1 = new Canino("Pitbull",14F,10);
+        Canino canino2 = new Canino("Doberman",14F,5);
+        Canino canino3 = new Canino("Chihuahua",14F,113);
+        Canino canino4 = new Canino("Labrador",50F,13);
 
-        List<Roedor> listaRoedores = new LinkedList<>();
+        List<Canino> listaCaninos = new LinkedList<>();
 
-        listaRoedores.add(roedor1);
-        listaRoedores.add(roedor2);
-        listaRoedores.add(roedor3);
+        listaCaninos.add(canino1);
+        listaCaninos.add(canino2);
+        listaCaninos.add(canino3);
+        listaCaninos.add(canino4);
 
-         Map<String, Movimiento> mapaRoedores = new HashMap<>();
-         mapaRoedores.put(roedor1.getNombre(),roedor1);
-         mapaRoedores.put(roedor2.getNombre(),roedor2);
-         mapaRoedores.put(roedor3.getNombre(),roedor3);
+         Map<String, Movimiento> mapaCaninos = new HashMap<>();
+        mapaCaninos.put(canino1.getNombre(), canino1);
+        mapaCaninos.put(canino2.getNombre(), canino2);
+        mapaCaninos.put(canino3.getNombre(), canino3);
 
-         List<Movimiento> listaRatones = new LinkedList<>(mapaRoedores.values());
-        for (Movimiento raton: listaRatones){
-            raton.verInformacion();
+         List<Movimiento> listCaninos = new LinkedList<>(mapaCaninos.values());
+        for (Movimiento canino: listCaninos){
+            canino.verInformacion();
         }
 
         System.out.println("##############################");
+
 
     }
 }
